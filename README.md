@@ -1,3 +1,5 @@
+EN | [RU](README-ru.md)
+
 # Сhatbot ModHelper
 
 Developed in 2019, this chatbot stands as my inaugural significant individual project, boasting seamless functionality up to the present day. The primary objective is to automate and streamline the handling and monitoring of player requests for account unlocks across two distinct gaming projects.
