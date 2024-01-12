@@ -1,10 +1,10 @@
 EN | [RU](README-ru.md)
 
-# 🦉 ModHelper - Chat-bot for monitoring a game project
+# 🦉 ModHelper - Chatbot for monitoring a game project
 
 <details>
   
-<summary><b>Sequence diagram chat-bot</b></summary>
+<summary><b>Sequence diagram chatbot</b></summary>
 
 ```mermaid
 sequenceDiagram
