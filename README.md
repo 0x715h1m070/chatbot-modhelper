@@ -1,6 +1,8 @@
 EN | [RU](README-ru.md)
 
-# 🦉 ModHelper - Chatbot for monitoring a game project
+<img src="/src/logo.png" width="40%">
+
+# Chatbot for monitoring a game project
 
 <details>
   
