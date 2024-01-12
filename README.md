@@ -1,12 +1,14 @@
 EN | [RU](README-ru.md)
 
-<img src="/src/logo.png" width="40%">
+# ModHelper (chatbot)
 
-# Chatbot for monitoring a game project
+Developed in 2019, this chatbot stands as my inaugural significant individual project, boasting seamless functionality up to the present day. The primary objective is to automate and streamline the handling and monitoring of player requests for account unlocks across two distinct gaming projects.
+
+Given the potential overlap in moderator teams across these projects, the bot is intricately designed to analyze account unlocking requests across all gaming project servers, promptly notifying the relevant moderators for swift action.
 
 <details>
   
-<summary><b>Sequence diagram chatbot</b></summary>
+<summary><b>📄 Sequence diagram chatbot</b></summary>
 
 ```mermaid
 sequenceDiagram
@@ -36,7 +38,7 @@ sequenceDiagram
 
 <details>
   
-<summary><b>Screenshots</b></summary>
+<summary><b>🖼️ Screenshots</b></summary>
 
 <p align="center">
   <img src="/src/screenshots/new_request.png">
@@ -71,10 +73,6 @@ sequenceDiagram
 </p>
 
 </details>
-
-Developed in 2019, this chatbot stands as my inaugural significant individual project, boasting seamless functionality up to the present day. The primary objective is to automate and streamline the handling and monitoring of player requests for account unlocks across two distinct gaming projects.
-
-Given the potential overlap in moderator teams across these projects, the bot is intricately designed to analyze account unlocking requests across all gaming project servers, promptly notifying the relevant moderators for swift action.
 
 ## 🎯 Primary Tasks and Features
 
