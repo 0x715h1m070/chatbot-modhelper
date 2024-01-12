@@ -82,22 +82,19 @@ sequenceDiagram
 - **Optimization of workflow:** Simplification and acceleration of moderators' work.
 - **Reduction of waiting time:** Reduced waiting time for response to unlock requests.
 
-<details>
-  <summary><b>📜 Command list</b></summary>
-  
-  - `/add_steam_id <SteamID>` - Adds SteamID to the blacklist.
-  - `/delete_steam_id <SteamID>` - Removes SteamID from the blacklist.
-  - `/list` - Get SteamID blacklisted.
-  - `/bot_stats` - Get a list *(TOP)* of moderators.
-  - `/on` - Enable notifications of new requests *(for the moderator who entered this command)*
-  - `/off` - Turn off notifications of new requests *(for the moderator who entered this command)*.
-  
-</details>
-
 ## 📊 Additional Functionalities
 
 - **Moderator Leaderboard:** The bot dynamically generates a leaderboard of gaming project moderators, reflecting the volume of requests each has managed. This aids in workload distribution and efficiency monitoring.
 - **Steam ID Blacklist:** Incorporates a blacklist functionality housing Steam IDs of specific players who should not be unlocked. Instant notifications are dispatched to moderators upon detecting any unban requests for these IDs, preventing potential errors.
+
+## 📜 Command list
+
+- `/add_steam_id <SteamID>` - Adds SteamID to the blacklist.
+- `/delete_steam_id <SteamID>` - Removes SteamID from the blacklist.
+- `/list` - Get SteamID blacklisted.
+- `/bot_stats` - Get a list *(TOP)* of moderators.
+- `/on` - Enable notifications of new requests *(for the moderator who entered this command)*
+- `/off` - Turn off notifications of new requests *(for the moderator who entered this command)*.
 
 ## 🛠️ Libraries and Dependencies
 
