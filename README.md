@@ -8,7 +8,7 @@ The bot is designed to analyze account unlocking requests across all gaming proj
 
 <details>
   
-<summary><b>📄 Sequence diagram chatbot</b></summary>
+<summary><b>📄 Chatbot Sequence Diagram</b></summary>
 
 ```mermaid
 sequenceDiagram
@@ -27,10 +27,10 @@ sequenceDiagram
     DB_Moderators-->>-Script: Moderator saved
     Script-->>-ModHelper: The moderator and the number of requests processed are stored in DB
     ModHelper->>+Script: Remove the request from the list after it has been reviewed.
-    Script->>+DB_Temp_requests: Removing an entry
-    DB_Temp_requests-->>-Script: Entry remove
+    Script->>+DB_Temp_requests: Removing a request from the list
+    DB_Temp_requests-->>-Script: Request remove
     Script-->>-ModHelper: Request has been removed from the list
-    ModHelper->>+Chat: Sending a notification to the chat for moderators.
+    ModHelper->>+Chat: Sending a notification to the chat for moderators
     Chat-->>-ModHelper: Notification has been sent
 ```
 
@@ -45,7 +45,7 @@ sequenceDiagram
 </p>
 
 <p align="center"> 
-  <b>Image 1</b> - A new request has been received from the game project site. Notification sent to moderators' chat.
+  <b>Image 1</b> - The game project site has received a new request. A notification has been sent to the moderators' chat.
 </p>
 
 <p align="center">
@@ -53,7 +53,7 @@ sequenceDiagram
 </p>
 
 <p align="center"> 
-  <b>Image 2</b> - Notify chat moderators about the request.
+  <b>Image 2</b> - After the request has been completed, a notification will be sent to the moderator chat.
 </p>
 
 <p align="center">
@@ -78,7 +78,7 @@ sequenceDiagram
 
 - **Data Collection and Analysis:** Collect and analyze data from player account unlock requests on both official websites of the gaming projects. 
 - **Moderator Notification:** Notify moderators automatically via messenger of new requests requiring their intervention.
-- **Workflow Optimization:** Simplifying and accelerating the work of moderators to
+- **Workflow Optimization:** Simplify and expedite the work of moderators.
 - **Reduce waiting time:** Minimize the time it takes to receive a response for unlocking requests.
 
 ## 📊 Additional Functionalities
