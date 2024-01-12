@@ -1,6 +1,6 @@
 [EN](README.md) | RU
 
-# 🦉 ModHelper - Чат-бот для мониторинга игрового проекта
+# 🦉 ModHelper - Chat-bot for monitoring a game project
 
 <details>
   
