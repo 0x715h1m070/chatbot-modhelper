@@ -79,31 +79,32 @@ Given the potential overlap in moderator teams across these projects, the bot is
 ## 🎯 Primary Tasks and Features
 
 - **Data Collection & Analysis:** Compiles and analyzes data from players' account unlock requests from the official websites of both gaming projects.
-  
 - **Automated Notifications:** Sends instant notifications to moderators via a chosen messenger concerning new requests that necessitate their intervention across all server instances.
-
 - **Workflow Enhancement:** Aims to optimize moderator tasks, increasing overall productivity, and reducing response times for player account unlocking requests.
+- **Optimization of workflow:** Simplification and acceleration of moderators' work.
+- **Reduction of waiting time:** Reduced waiting time for response to unlock requests.
+
+<details>
+  <summary><b>📜 Command list</b></summary>
+  
+  - `/add_steam_id <SteamID>` - Adds SteamID to the blacklist.
+  - `/delete_steam_id <SteamID>` - Removes SteamID from the blacklist.
+  - `/list` - Get SteamID blacklisted.
+  - `/bot_stats` - Get a list *(TOP)* of moderators.
+  - `/on` - Enable notifications of new requests *(for the moderator who entered this command)*
+  - `/off` - Turn off notifications of new requests *(for the moderator who entered this command)*.
+  
+</details>
 
 ## 📊 Additional Functionalities
 
 - **Moderator Leaderboard:** The bot dynamically generates a leaderboard of gaming project moderators, reflecting the volume of requests each has managed. This aids in workload distribution and efficiency monitoring.
-  
 - **Steam ID Blacklist:** Incorporates a blacklist functionality housing Steam IDs of specific players who should not be unlocked. Instant notifications are dispatched to moderators upon detecting any unban requests for these IDs, preventing potential errors.
-
-## 🌟 Advantages
-
-- **Optimized Workflow:** Significantly streamlines and accelerates moderator tasks, ensuring prompt responses to critical player requests.
-  
-- **Reduced Waiting Period:** Minimizes the waiting time for users awaiting account unlock responses, enhancing overall user satisfaction.
 
 ## 🛠️ Libraries and Dependencies
 
 - **vk_api:** Facilitates interaction with the VK social network API.
-  
 - **requests:** Enables HTTP request handling and data retrieval from web pages.
-  
 - **bs4 (Beautiful Soup):** Empowers HTML content parsing and data extraction.
-  
 - **telebot:** Enables seamless integration with Telegram messenger for moderator notifications.
-  
 - **pytz:** Ensures efficient time zone management and timestamp handling within the project.
