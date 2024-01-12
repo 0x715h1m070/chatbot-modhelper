@@ -34,6 +34,44 @@ sequenceDiagram
 
 </details>
 
+<details>
+  
+<summary><b>Screenshots</b></summary>
+
+<p align="center">
+  <img src="/src/screenshots/new_request.png">
+</p>
+
+<p align="center"> 
+  <b>Изображение 1</b> - Notification in the moderators' chat about receiving a new request from the game project site
+</p>
+
+<p align="center">
+  <img src="/src/screenshots/reviewed_request.png">
+</p>
+
+<p align="center"> 
+  <b>Изображение 2</b> - Notification in the chat moderators about the consideration of the request
+</p>
+
+<p align="center">
+  <img src="/src/screenshots/website_request.png">
+</p>
+
+<p align="center"> 
+  <b>Изображение 3</b> - Screenshot of data from the game project website
+</p>
+
+<p align="center">
+  <img src="/src/screenshots/bot_stats.png">
+</p>
+
+<p align="center"> 
+  <b>Изображение 4</b> - Screenshot of the command "/bot_stats" which displays the list of moderators sorted in descending order
+</p>
+
+</details>
+
 Developed in 2019, this chatbot stands as my inaugural significant individual project, boasting seamless functionality up to the present day. The primary objective is to automate and streamline the handling and monitoring of player requests for account unlocks across two distinct gaming projects.
 
 Given the potential overlap in moderator teams across these projects, the bot is intricately designed to analyze account unlocking requests across all gaming project servers, promptly notifying the relevant moderators for swift action.
