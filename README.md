@@ -28,8 +28,9 @@ sequenceDiagram
     Script-->>-ModHelper: Request removed from the list
     ModHelper->>+Chat: Sending a notification to the moderators' chat
     Chat-->>-ModHelper: Notification has been sent
-</details>
 ```
+
+</details>
 
 Developed in 2019, this chatbot stands as my inaugural significant individual project, boasting seamless functionality up to the present day. The primary objective is to automate and streamline the handling and monitoring of player requests for account unlocks across two distinct gaming projects.
 
