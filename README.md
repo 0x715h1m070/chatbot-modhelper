@@ -1,6 +1,35 @@
 EN | [RU](README-ru.md)
 
-# Сhatbot ModHelper
+# 🦉 ModHelper - Chat-bot for monitoring a game project
+
+<details>
+  
+<summary><b>Диаграмма последовательности чат-бота</b></summary>
+
+```mermaid
+sequenceDiagram
+    ModHelper->>+Website: Receiving requests from players
+    Website-->>-ModHelper: Sending a list of requests
+    ModHelper->>+Script: Checking the list for new requests
+    Script->>+DB_Temp_requests: Saving a request
+    DB_Temp_requests-->>-Script: Request saved
+    Script-->>-ModHelper: New requests found
+    ModHelper->>+Chat: Sending a notification to the moderators' chat
+    Chat-->>-ModHelper: Notification has been sent
+    ModHelper->>+Website: Verification of requests for review
+    Website-->>-ModHelper: Request reviewed by moderator
+    ModHelper->>+Script: Retain the moderator who reviewed the request
+    Script->>+DB_Moderators: Saving a moderator
+    DB_Moderators-->>-Script: Moderator saved
+    Script-->>-ModHelper: The moderator and the number of requests processed are stored in DB
+    ModHelper->>+Script: Remove the reviewed request from the list
+    Script->>+DB_Temp_requests: Deleting an entry
+    DB_Temp_requests-->>-Script: Entry deleted
+    Script-->>-ModHelper: Request removed from the list
+    ModHelper->>+Chat: Sending a notification to the moderators' chat
+    Chat-->>-ModHelper: Notification has been sent
+</details>
+```
 
 Developed in 2019, this chatbot stands as my inaugural significant individual project, boasting seamless functionality up to the present day. The primary objective is to automate and streamline the handling and monitoring of player requests for account unlocks across two distinct gaming projects.
 
