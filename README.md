@@ -2,9 +2,9 @@ EN | [RU](README-ru.md)
 
 # ModHelper (chatbot)
 
-Developed in 2019, this chatbot stands as my inaugural significant individual project, boasting seamless functionality up to the present day. The primary objective is to automate and streamline the handling and monitoring of player requests for account unlocks across two distinct gaming projects.
+In 2019, I developed a chatbot as my first significant individual project. It has been functioning seamlessly ever since. The main goal of the chatbot is to automate and streamline the handling and monitoring of player requests for account unlocks in two different gaming projects.
 
-Given the potential overlap in moderator teams across these projects, the bot is intricately designed to analyze account unlocking requests across all gaming project servers, promptly notifying the relevant moderators for swift action.
+The bot is designed to analyze account unlocking requests across all gaming project servers and promptly notify the relevant moderators for swift action. This is important because there may be overlap in moderator teams across these projects.
 
 <details>
   
@@ -12,25 +12,25 @@ Given the potential overlap in moderator teams across these projects, the bot is
 
 ```mermaid
 sequenceDiagram
-    ModHelper->>+Website: Receiving requests from players
+    ModHelper->>+Website: Receiving player requests
     Website-->>-ModHelper: Sending a list of requests
     ModHelper->>+Script: Checking the list for new requests
-    Script->>+DB_Temp_requests: Saving a request
+    Script->>+DB_Temp_requests: Request Saving
     DB_Temp_requests-->>-Script: Request saved
-    Script-->>-ModHelper: New requests found
-    ModHelper->>+Chat: Sending a notification to the moderators' chat
-    Chat-->>-ModHelper: Notification has been sent
-    ModHelper->>+Website: Verification of requests for review
-    Website-->>-ModHelper: Request reviewed by moderator
+    Script-->>-ModHelper: New requests discovered
+    ModHelper->>+Chat: Sending a notification to the chat for moderators
+    Chat-->>-ModHelper: Notification sent
+    ModHelper->>+Website: Review Request Verification
+    Website-->>-ModHelper: Moderator review requested
     ModHelper->>+Script: Retain the moderator who reviewed the request
-    Script->>+DB_Moderators: Saving a moderator
+    Script->>+DB_Moderators: Moderator Saving
     DB_Moderators-->>-Script: Moderator saved
     Script-->>-ModHelper: The moderator and the number of requests processed are stored in DB
-    ModHelper->>+Script: Remove the reviewed request from the list
-    Script->>+DB_Temp_requests: Deleting an entry
-    DB_Temp_requests-->>-Script: Entry deleted
-    Script-->>-ModHelper: Request removed from the list
-    ModHelper->>+Chat: Sending a notification to the moderators' chat
+    ModHelper->>+Script: Remove the request from the list after it has been reviewed.
+    Script->>+DB_Temp_requests: Removing an entry
+    DB_Temp_requests-->>-Script: Entry remove
+    Script-->>-ModHelper: Request has been removed from the list
+    ModHelper->>+Chat: Sending a notification to the chat for moderators.
     Chat-->>-ModHelper: Notification has been sent
 ```
 
@@ -45,7 +45,7 @@ sequenceDiagram
 </p>
 
 <p align="center"> 
-  <b>Изображение 1</b> - Notification in the moderators' chat about receiving a new request from the game project site
+  <b>Image 1</b> - A new request has been received from the game project site. Notification sent to moderators' chat.
 </p>
 
 <p align="center">
@@ -53,7 +53,7 @@ sequenceDiagram
 </p>
 
 <p align="center"> 
-  <b>Изображение 2</b> - Notification in the chat moderators about the consideration of the request
+  <b>Image 2</b> - Notify chat moderators about the request.
 </p>
 
 <p align="center">
@@ -61,7 +61,7 @@ sequenceDiagram
 </p>
 
 <p align="center"> 
-  <b>Изображение 3</b> - Screenshot of data from the game project website
+  <b>Image 3</b> - Data screenshot from the game project website.
 </p>
 
 <p align="center">
@@ -69,32 +69,31 @@ sequenceDiagram
 </p>
 
 <p align="center"> 
-  <b>Изображение 4</b> - Screenshot of the command "/bot_stats" which displays the list of moderators sorted in descending order
+  <b>Image 4</b> - The command "/bot_stats" displays a list of moderators sorted in descending order.
 </p>
 
 </details>
 
 ## 🎯 Primary Tasks and Features
 
-- **Data Collection & Analysis:** Compiles and analyzes data from players' account unlock requests from the official websites of both gaming projects.
-- **Automated Notifications:** Sends instant notifications to moderators via a chosen messenger concerning new requests that necessitate their intervention across all server instances.
-- **Workflow Enhancement:** Aims to optimize moderator tasks, increasing overall productivity, and reducing response times for player account unlocking requests.
-- **Optimization of workflow:** Simplification and acceleration of moderators' work.
-- **Reduction of waiting time:** Reduced waiting time for response to unlock requests.
+- **Data Collection and Analysis:** Collect and analyze data from player account unlock requests on both official websites of the gaming projects. 
+- **Moderator Notification:** Notify moderators automatically via messenger of new requests requiring their intervention.
+- **Workflow Optimization:** Simplifying and accelerating the work of moderators to
+- **Reduce waiting time:** Minimize the time it takes to receive a response for unlocking requests.
 
 ## 📊 Additional Functionalities
 
-- **Moderator Leaderboard:** The bot dynamically generates a leaderboard of gaming project moderators, reflecting the volume of requests each has managed. This aids in workload distribution and efficiency monitoring.
-- **Steam ID Blacklist:** Incorporates a blacklist functionality housing Steam IDs of specific players who should not be unlocked. Instant notifications are dispatched to moderators upon detecting any unban requests for these IDs, preventing potential errors.
+- **Moderator Leaderboard:** The bot generates a leaderboard of gaming project moderators based on the number of requests they have managed. This helps distribute workload and monitor efficiency.
+- **Steam ID Blacklist:** The system includes a blacklist feature that stores Steam IDs of players who should not be unbanned. Moderators receive immediate notifications when unban requests are made for these IDs, preventing any potential errors.
 
 ## 📜 Command list
 
-- `/add_steam_id <SteamID>` - Adds SteamID to the blacklist.
-- `/delete_steam_id <SteamID>` - Removes SteamID from the blacklist.
-- `/list` - Get SteamID blacklisted.
-- `/bot_stats` - Get a list *(TOP)* of moderators.
-- `/on` - Enable notifications of new requests *(for the moderator who entered this command)*
-- `/off` - Turn off notifications of new requests *(for the moderator who entered this command)*.
+- To add a SteamID to the blacklist, use `/add_steam_id <SteamID>`.
+- To remove a SteamID from the blacklist, use `/delete_steam_id <SteamID>`.
+- To get a list of blacklisted SteamIDs, use `/list`.
+- To get a list of moderators, use `/bot_stats`.
+- To enable notifications of new requests, use `/on` (for the moderator who entered this command).
+- `/off` - Disable notifications for new requests (for the moderator who entered this command).
 
 ## 🛠️ Libraries and Dependencies
 
