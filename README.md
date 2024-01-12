@@ -4,7 +4,7 @@ EN | [RU](README-ru.md)
 
 <details>
   
-<summary><b>Диаграмма последовательности чат-бота</b></summary>
+<summary><b>Sequence diagram chat-bot</b></summary>
 
 ```mermaid
 sequenceDiagram
